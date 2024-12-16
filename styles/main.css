@@ -52,6 +52,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    height: 100%;
     width: 100%;
 }
 
@@ -165,6 +166,7 @@ font-weight: 700;
     padding: 25px 10px;
     border-radius: 6px;
     width: fit-content;
+    cursor: pointer;
 }
 /* banner */
 
@@ -270,7 +272,7 @@ font-weight: 700;
     max-width: 976px;
     width: 100%;
     border-radius: 6px;
-    border: 1px solid var(--brand-color);
+    border: 1px solid rgba(0,110,184, 0.7);
     padding: 27px 0 39px 43px;
     display: flex;
     flex-direction: column;
@@ -358,5 +360,354 @@ font-weight: 700;
     line-height: 120%;
     background-color: transparent;
     width: fit-content;
+    cursor: pointer;
 }
 /* about block */
+
+/* about education stages */
+.stages__block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 85px;
+    gap: 38px;
+}
+
+.stages__block h2{
+    font-size: 50px;
+    line-height: 60px; 
+    letter-spacing: -0.03em;
+}
+
+.stages__accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.stages__accordion-item{
+    border-radius: 6px;
+    width: 100%;
+    border: 1px solid rgba(0,110,184, 0.7);
+    padding: 18px 54px 18px 30px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    transition: 0.3s ease;
+}
+
+.stages__accordion-item.open{
+    background-color: #889FC4;
+    border-color: #889FC4;
+    padding-bottom: 35px;
+}
+
+.stages__accordion-item h5{
+    font-size: 18px;
+    line-height: 25px; 
+}
+
+.stages__accordion-item.open h5{
+    color: #fff;
+}
+
+.stages__accordion-item p{
+    font-size: 18px;
+    line-height: 25px; 
+    color: #fff;
+    display: none;
+}
+
+.stages__accordion-item.open p{
+    display: block;
+    opacity: 1;
+}
+
+.stages__accordion-item svg{
+    position: absolute;
+    right: 21px;
+    top: 21px;
+    cursor: pointer;
+}
+
+.stages__accordion-item.open svg{
+    transform: rotate(180deg);
+}
+
+.stages__accordion-item.open svg path{
+    stroke: #fff;
+}
+/* about education stages */
+
+/* feedback block */
+.feedback__block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 85px;
+    margin-bottom: 98px;
+}
+
+.feedback__block-left{
+    border-radius: 6px;
+    max-width: 865px;
+    width: 100%;
+    border: 1px solid rgba(0,110,184, 0.7);
+    padding: 27px 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    position: relative;
+}
+
+.feedback__block-left h2{
+    font-size: 50px;
+    line-height: 60px; 
+    letter-spacing: -0.03em;
+    max-width: 540px;
+}
+
+.feedback__block-left h5{
+    font-size: 18px;
+    line-height: 25px; 
+    color: #1c1c1c;
+    max-width: 336px;
+}
+
+.feedback__block-left img{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 0;
+    bottom: 0;
+}
+
+.feedback__block-right{
+    background-color: #889FC4;
+    border-radius: 6px;
+    padding: 27px 30px 30px;
+    max-width: 425px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+
+.feedback__block-right h3{
+    max-width: 303px;
+    font-size: 26px;
+    line-height: 31px; 
+    color: #fff;
+}
+
+.feedback__form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.input__container{
+    background-color: #fff;
+    border-radius: 6px;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}
+
+.input__container p{
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px; 
+}
+
+.input__container input{
+    height: 60px;
+    border-radius: 6px;
+    width: 100%;
+    padding-left: 14px;
+    font-size: 16px;
+    line-height: 19px; 
+    color: #a7a9b7;
+    padding-top: 31px;
+    padding-bottom: 10px;
+}
+
+.input__container input::placeholder{
+    font-size: 16px;
+    line-height: 19px; 
+    color: #a7a9b7;
+}
+
+.input__container input:focus{
+    outline: none;
+}
+
+.agree__container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.agree__container p{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #fff; /* Цвет текста */
+}
+
+/* Основной контейнер для чекбокса */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Стили для кастомного чекбокса */
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Скрываем иконку по умолчанию */
+.checkmark-icon {
+    display: none;
+}
+
+/* Стили для кастомного чекбокса при наведении */
+.custom-checkbox:hover input ~ .checkmark {
+    border-color: #889FC4;
+}
+
+/* Стили для кастомного чекбокса, когда он отмечен */
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #889FC4;
+    border-color: #889FC4;
+}
+
+/* Показываем иконку, когда чекбокс отмечен */
+.custom-checkbox input:checked ~ .checkmark .checkmark-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.underline{
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #fff; /* Цвет текста */
+}
+
+.feedback__form button{
+    padding: 25px 28px;
+    width: fit-content;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.12;
+    text-align: center;
+    color: #889fc4;
+    cursor: pointer;
+}
+/* feedback block */
+
+/* footer */
+.footer{
+    width: 100%;
+    border-top: 1px solid rgba(0,110,184, 0.7);
+    padding: 35px 0 17px;
+}
+
+.footer__top{
+    max-width: 1305px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer__top a{
+    width: 185px;
+    margin-right: 84px;
+}
+
+.footer__top a img{
+    width: 185px;
+}
+
+.contacts__item{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.contacts__item .call{
+    margin-right: 39px;
+}
+
+.contacts__item p{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.contacts__item a{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.15;
+    width: fit-content;
+}
+
+.footer__bottom{
+    max-width: 1305px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.footer__bottom p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #6c6c6c;
+}
+
+.footer__bottom .copyright{
+    display: flex;
+    gap: 9px;
+}
+
+.footer__bottom .copyright svg{
+    margin-top: 3px;
+}
+/* footer */
